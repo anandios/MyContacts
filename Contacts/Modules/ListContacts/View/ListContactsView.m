@@ -99,7 +99,6 @@ static NSString *const kSpaceString = @" ";
 	cell.detailTextLabel.text = contact.phoneNumber;
 	
 	return cell;
-
 }
 
 #pragma mark - TableView Delegate
