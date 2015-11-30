@@ -21,12 +21,12 @@
 	id <AddContactsPresenterProtocol, AddContactsInteractorOutputProtocol> presenter = self.presenter;
 	[presenter setView:self.view];
 	[self.view setPresenter:presenter];
-	[fromViewController presentViewController:self.view animated:YES completion:nil];
+	[fromViewController.navigationController pushViewController:self.view animated:YES];
 }
 
 - (void)dismissAddContactView
 {
-	[self.parentView dismissViewControllerAnimated:YES completion:nil];
+	[self.parentView.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark - private
