@@ -6,10 +6,15 @@
 #import "ListContactsView.h"
 #import "Contact.h"
 
+
+static NSString *const kViewTitle = @"My Contacts";
+static NSString *const kContactInfoCellIdentifier = @"ContactInfoCell";
+static NSString *const kSpaceString = @" ";
+
 @interface ListContactsView ()
 
 @property (nonatomic, weak) IBOutlet UITableView *contactListTableView;
-
+@property (nonatomic, copy) NSString *viewTitle;
 @property (nonatomic, strong) NSArray *contacts;
 
 @end
@@ -28,22 +33,23 @@
 
 #pragma mark - ListContactsViewProtocol
 
-//TODO
 - (void)showNoContactsMessage
 {
 	self.view = self.noContactsView;
+	self.viewTitle = kViewTitle;
 }
 
 - (void)showContactsUsingArray:(NSArray *)contactsArray
 {
 	self.view = self.contactListTableView;
 	self.contacts = contactsArray;
+	self.viewTitle = [kViewTitle stringByAppendingString:[NSString stringWithFormat:@"%@(%ld)", kSpaceString, self.contacts.count]];
 	[self reloadContacts];
 }
 
 - (void)updateTitle
 {
-	[self.navigationItem setTitle:[@"My Contacts" stringByAppendingString:[NSString stringWithFormat:@" (%ld)", self.contacts.count]]];
+	[self.navigationItem setTitle:self.viewTitle];
 }
 
 - (void)reloadContacts
@@ -70,7 +76,6 @@
 	return YES;
 }
 
-// Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -87,9 +92,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	
-	UITableViewCell *cell = [self.contactListTableView dequeueReusableCellWithIdentifier:@"ContactInfoCell" forIndexPath:indexPath];
+	UITableViewCell *cell = [self.contactListTableView dequeueReusableCellWithIdentifier:kContactInfoCellIdentifier
+																			forIndexPath:indexPath];
 	Contact *contact = self.contacts[indexPath.row];
-	cell.textLabel.text = [[contact.firstName stringByAppendingString:@" "] stringByAppendingString:contact.lastName];
+	cell.textLabel.text = [[contact.firstName stringByAppendingString:kSpaceString] stringByAppendingString:contact.lastName];
 	cell.detailTextLabel.text = contact.phoneNumber;
 	
 	return cell;
@@ -107,10 +113,9 @@
 
 #pragma mark - Private
 
-//TODO : Localize it
 - (void)configureView
 {
-	[self.navigationItem setTitle:@"My Contacts"];
+	[self.navigationItem setTitle:kViewTitle];
 }
 
 @end

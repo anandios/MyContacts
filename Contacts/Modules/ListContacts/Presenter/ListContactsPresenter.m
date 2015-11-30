@@ -31,10 +31,10 @@
 {
 	if ([contacts count] > 0) {
 		[self.view showContactsUsingArray:contacts];
-		[self.view updateTitle];
 	} else {
 		[self.view showNoContactsMessage];
 	}
+	[self.view updateTitle];
 }
 
 
