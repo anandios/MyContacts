@@ -17,4 +17,12 @@
 	[[UIApplication sharedApplication] openURL:phoneUrl];
 }
 
++ (BOOL)isValidPhoneNumber:(NSString *)number
+{
+	NSDataDetector *phoneNumberDetector = [NSDataDetector dataDetectorWithTypes:NSTextCheckingTypePhoneNumber error:nil];
+	NSUInteger matches = [phoneNumberDetector numberOfMatchesInString:number options:0 range:NSMakeRange(0, number.length)];
+	
+	return matches > 0;
+}
+
 @end

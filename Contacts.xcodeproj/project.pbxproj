@@ -11,7 +11,7 @@
 		17A0B14E1C0051B3002ABB04 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A0B14D1C0051B3002ABB04 /* AppDelegate.m */; };
 		17A0B1591C0051B3002ABB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A0B1581C0051B3002ABB04 /* Assets.xcassets */; };
 		17A0B15C1C0051B3002ABB04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A0B15A1C0051B3002ABB04 /* LaunchScreen.storyboard */; };
-		17A0B1671C0051B3002ABB04 /* ContactsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A0B1661C0051B3002ABB04 /* ContactsTests.m */; };
+		17A0B1671C0051B3002ABB04 /* UtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A0B1661C0051B3002ABB04 /* UtilitiesTests.m */; };
 		17A0B1D31C005487002ABB04 /* Dependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A0B1D21C005487002ABB04 /* Dependencies.m */; };
 		17A0B1D81C005624002ABB04 /* RootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A0B1D71C005624002ABB04 /* RootWireframe.m */; };
 		17C039841C0BCBF700D8AF12 /* AddContactsLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C039731C0BCBF700D8AF12 /* AddContactsLocalDataManager.m */; };
@@ -52,7 +52,7 @@
 		17A0B15B1C0051B3002ABB04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17A0B15D1C0051B3002ABB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A0B1621C0051B3002ABB04 /* ContactsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17A0B1661C0051B3002ABB04 /* ContactsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactsTests.m; sourceTree = "<group>"; };
+		17A0B1661C0051B3002ABB04 /* UtilitiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UtilitiesTests.m; sourceTree = "<group>"; };
 		17A0B1681C0051B3002ABB04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A0B1D11C005487002ABB04 /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 		17A0B1D21C005487002ABB04 /* Dependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dependencies.m; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		17A0B1651C0051B3002ABB04 /* ContactsTests */ = {
 			isa = PBXGroup;
 			children = (
-				17A0B1661C0051B3002ABB04 /* ContactsTests.m */,
+				17A0B1661C0051B3002ABB04 /* UtilitiesTests.m */,
 				17A0B1681C0051B3002ABB04 /* Info.plist */,
 			);
 			path = ContactsTests;
@@ -521,7 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17A0B1671C0051B3002ABB04 /* ContactsTests.m in Sources */,
+				17A0B1671C0051B3002ABB04 /* UtilitiesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

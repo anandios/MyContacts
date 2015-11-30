@@ -11,5 +11,6 @@
 @interface Utilities : NSObject
 
 + (void)makeCallOnNumber:(NSString *)number;
++ (BOOL)isValidPhoneNumber:(NSString *)number;
 
 @end
