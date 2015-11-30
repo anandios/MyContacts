@@ -26,12 +26,6 @@
 	[self configureView];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-	[super viewWillAppear:animated];
-	[self.presenter updateContactList];
-}
-
 #pragma mark - ListContactsViewProtocol
 
 //TODO
@@ -55,7 +49,6 @@
 - (void)reloadContacts
 {
 	[self.contactListTableView reloadData];
-	[self updateTitle];
 }
 
 #pragma - Button Actions 
