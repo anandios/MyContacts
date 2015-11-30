@@ -42,7 +42,6 @@
 /**
  * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
  */
-@class Contact;
 @protocol ListContactsPresenterProtocol
 @required
 @property (nonatomic, weak) id <ListContactsViewProtocol> view;
@@ -52,7 +51,6 @@
 - (void)addNewContact;
 - (void)updateContactList;
 - (void)deleteContactAtIndex:(NSInteger)index;
-- (void)selectedContact:(Contact *)contact;
 
 @end
 

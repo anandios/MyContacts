@@ -5,7 +5,7 @@
 
 #import "ListContactsView.h"
 #import "Contact.h"
-
+#import "Utilities.h"
 
 static NSString *const kViewTitle = @"My Contacts";
 static NSString *const kContactInfoCellIdentifier = @"ContactInfoCell";
@@ -105,8 +105,8 @@ static NSString *const kSpaceString = @" ";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	//TODO
-	//Ask user if he wants to call
+	Contact *selectedContact = self.contacts[indexPath.row];
+	[Utilities makeCallOnNumber:selectedContact.phoneNumber];
 }
 
 
