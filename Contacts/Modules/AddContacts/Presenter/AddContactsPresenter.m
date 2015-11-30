@@ -23,10 +23,4 @@
 	[self.addModuleDelegate didSaveContactAction];
 }
 
-- (void)deleteContactAction:(Contact *)contact
-{
-	[self.interactor removeContact:contact];
-	[self.addModuleDelegate didDeleteContactAction];
-}
-
 @end

@@ -46,7 +46,6 @@
 
 - (void)cancelAddContactAction;
 - (void)saveAddContactActionWithFirstName:(NSString *)firstName lastName:(NSString *)lastName phoneNumber:(NSString *)phoneNumber;
-- (void)deleteContactAction:(Contact *)contact;
 
 @end
 
@@ -66,7 +65,6 @@
  * Add here your methods for communication PRESENTER -> INTERACTOR
  */
 - (void)saveNewContactWithFirstName:(NSString *)firstName lastName:(NSString *)lastName phoneNumber:(NSString *)phoneNumber;
-- (void)removeContact:(Contact *)contact;
 
 @end
 
