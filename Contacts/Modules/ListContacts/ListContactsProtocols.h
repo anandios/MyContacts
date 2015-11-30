@@ -48,6 +48,7 @@
 @property (nonatomic, weak) id <ListContactsViewProtocol> view;
 @property (nonatomic, strong) id <ListContactsInteractorInputProtocol> interactor;
 @property (nonatomic, strong) id <ListContactsWireFrameProtocol> wireFrame;
+
 - (void)addNewContact;
 - (void)updateContactList;
 - (void)deleteContactAtIndex:(NSInteger)index;
@@ -70,6 +71,7 @@
 @required
 @property (nonatomic, weak) id <ListContactsInteractorOutputProtocol> presenter;
 @property (nonatomic, strong) id <ListContactsDataManagerInputProtocol> localDataManager;
+
 - (void)findContacts;
 - (void)removeContactAtIndex:(NSInteger)index;
 
