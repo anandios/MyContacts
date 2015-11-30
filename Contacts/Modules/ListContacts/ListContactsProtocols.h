@@ -14,12 +14,12 @@
 
 @class ListContactsWireFrame;
 
-@protocol ListContactsViewProtocol
-@required
-@property (nonatomic, strong) id <ListContactsPresenterProtocol> presenter;
 /**
  * Add here your methods for communication PRESENTER -> VIEWCONTROLLER
  */
+@protocol ListContactsViewProtocol
+@required
+@property (nonatomic, strong) id <ListContactsPresenterProtocol> presenter;
 
 - (void)showNoContactsMessage;
 - (void)showContactsUsingArray:(NSArray *)contactsArray;
@@ -28,55 +28,59 @@
 
 @end
 
-@protocol ListContactsWireFrameProtocol
-//@required
-- (void)presentListContactInterfaceFromWindow:(UIWindow *)window;
-- (void)presentAddContactView;
 /**
  * Add here your methods for communication PRESENTER -> WIREFRAME
  */
+@protocol ListContactsWireFrameProtocol
+@required
+
+- (void)presentListContactInterfaceFromWindow:(UIWindow *)window;
+- (void)presentAddContactView;
 
 @end
 
+/**
+ * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
+ */
+@class Contact;
 @protocol ListContactsPresenterProtocol
 @required
 @property (nonatomic, weak) id <ListContactsViewProtocol> view;
 @property (nonatomic, strong) id <ListContactsInteractorInputProtocol> interactor;
 @property (nonatomic, strong) id <ListContactsWireFrameProtocol> wireFrame;
-/**
- * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
- */
 - (void)addNewContact;
 - (void)updateContactList;
 - (void)deleteContactAtIndex:(NSInteger)index;
+- (void)selectedContact:(Contact *)contact;
 
 @end
 
-@protocol ListContactsInteractorOutputProtocol
 /**
  * Add here your methods for communication INTERACTOR -> PRESENTER
  */
+@protocol ListContactsInteractorOutputProtocol
 - (void)foundContacts:(NSArray *)contacts;
 
 @end
 
+/**
+ * Add here your methods for communication PRESENTER -> INTERACTOR
+ */
 @protocol ListContactsInteractorInputProtocol
 @required
 @property (nonatomic, weak) id <ListContactsInteractorOutputProtocol> presenter;
 @property (nonatomic, strong) id <ListContactsDataManagerInputProtocol> localDataManager;
-/**
- * Add here your methods for communication PRESENTER -> INTERACTOR
- */
 - (void)findContacts;
 - (void)removeContactAtIndex:(NSInteger)index;
 
 @end
 
-
-@protocol ListContactsDataManagerInputProtocol
 /**
  * Add here your methods for communication INTERACTOR -> DATAMANAGER
  */
+@protocol ListContactsDataManagerInputProtocol
+
 - (void)contactsForString:(NSString *)searchString withCompletionBlock:(void (^)(NSArray *contacts))completionBlock;
 - (void)deleteContactAtIndex:(NSInteger)index withCompletionBlock:(void (^)(NSArray *contacts))completionBlock;
+
 @end
