@@ -10,4 +10,6 @@
 
 @interface Utilities : NSObject
 
++ (void)makeCallOnNumber:(NSString *)number;
+
 @end

@@ -7,7 +7,14 @@
 //
 
 #import "Utilities.h"
+#import <UIKIt/UIKit.h>
 
 @implementation Utilities
+
++ (void)makeCallOnNumber:(NSString *)number
+{
+	NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@", number]];
+	[[UIApplication sharedApplication] openURL:phoneUrl];
+}
 
 @end
