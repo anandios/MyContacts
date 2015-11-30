@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  Dependencies.h
 //  Contacts
 //
 //  Created by Anand Singh on 11/30/15.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface Dependencies : NSObject
 
-@property (strong, nonatomic) UIWindow *window;
+- (void)setupRootViewControllerIntoWindow:(UIWindow *)window;
 
 @end
-
