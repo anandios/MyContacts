@@ -9,7 +9,6 @@
 #import "Datastore.h"
 #import "PContact.h"
 
-
 @interface Datastore ()
 
 @property (nonatomic, strong) NSMutableArray *storage;
@@ -49,7 +48,7 @@
 	completionBlock(result);
 }
 
-- (void)removeContactAtIndex:(NSInteger)index completionBlock:(void (^)(NSArray *))completionBlock;
+- (void)removeContactAtIndex:(NSInteger)index completionBlock:(void (^)(NSArray *result))completionBlock;
 {
 	if (index > -1) {
 		[self.storage removeObjectAtIndex:index];
