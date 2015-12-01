@@ -26,7 +26,7 @@
 
 - (void)dismissAddContactView
 {
-	[self.parentView.navigationController popToRootViewControllerAnimated:YES];
+	[self.parentView.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - private

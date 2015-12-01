@@ -4,12 +4,15 @@
 //
 
 #import "AddContactsView.h"
+#import "NameValidator.h"
+#import "PhoneNumberValidator.h"
 
 @interface AddContactsView ()
 
 @property (nonatomic, weak) IBOutlet UITextField *firstNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *lastNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *phoneNumberTextField;
+
 
 @end
 
@@ -22,23 +25,40 @@
     [super viewDidLoad];
 }
 
-//- (void)viewDidDisappear:(BOOL)animated
-//{
-//    [super viewDidDisappear:animated];
-//	//Being removed from ParentViewController
-//	if (self.isMovingFromParentViewController) {
-//		[self.presenter cancelAddContactAction];
-//	}
-//
-//}
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+	if (![self isDataValid]) {
+		[self.presenter cancelAddContactAction];
+	}
+
+}
 
 #pragma mark - 
 
 - (IBAction)saveButtonAction:(id)sender
 {
-	[self.presenter saveAddContactActionWithFirstName:self.firstNameTextField.text
+	if ([self isDataValid]) {
+		[self.presenter saveAddContactActionWithFirstName:self.firstNameTextField.text
 											 lastName:self.lastNameTextField.text
 										  phoneNumber:self.phoneNumberTextField.text];
+	} else {
+		[[[UIAlertView alloc] initWithTitle:@"Error"
+									message:@"Data provided by you is not valid. Please enter correctly."
+								   delegate:nil
+						  cancelButtonTitle:@"OK"
+						  otherButtonTitles:nil, nil] show];
+	}
+}
+
+#pragma mark - Private
+
+- (BOOL)isDataValid
+{
+	NameValidator *nameValidator = [NameValidator new];
+	PhoneNumberValidator *phValidator = [PhoneNumberValidator new];
+	
+	return [nameValidator validate:self.firstNameTextField.text] && [phValidator validate:self.phoneNumberTextField.text];
 }
 
 @end
