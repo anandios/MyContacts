@@ -35,6 +35,7 @@
 		[self.view showNoContactsMessage];
 	}
 	[self.view updateTitle];
+	[self.view reloadContacts];
 }
 
 

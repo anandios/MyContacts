@@ -40,4 +40,19 @@
 	OCMVerify([self.presenter addNewContact]);
 }
 
+- (void)testDeleteAction {
+	SEL selector = @selector(tableView:commitEditingStyle:forRowAtIndexPath:);
+	NSInvocation *anInvocation = [NSInvocation invocationWithMethodSignature:[ListContactsView instanceMethodSignatureForSelector:selector]];
+	[anInvocation setSelector:selector];
+	[anInvocation setTarget:self.listContactsView];
+	UITableViewCellEditingStyle style = UITableViewCellEditingStyleDelete;
+	NSIndexPath *indexPath = [NSIndexPath indexPathForRow:5 inSection:0];
+	[anInvocation setArgument:&style atIndex:3];
+	[anInvocation setArgument:&indexPath atIndex:4];
+	[anInvocation invokeWithTarget:self.listContactsView];
+	
+	OCMVerify([self.presenter deleteContactAtIndex:5]);
+	OCMVerify([self.listContactsView reloadContacts]);
+}
+
 @end
