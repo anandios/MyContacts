@@ -17,10 +17,19 @@
 
 - (void)saveAddContactActionWithFirstName:(NSString *)firstName lastName:(NSString *)lastName phoneNumber:(NSString *)phoneNumber
 {
-	[self.wireFrame dismissAddContactView];
-	[self.interactor saveNewContactWithFirstName:firstName lastName:lastName phoneNumber:phoneNumber];
-	//call add module delegate method as a callback
-	[self.addModuleDelegate didSaveContactAction];
+	__weak typeof(self) weakSelf = self;
+	[self.interactor saveNewContactWithFirstName:firstName lastName:lastName phoneNumber:phoneNumber withCompletionBlock:^(BOOL success) {
+		if (success) {
+			[weakSelf.wireFrame dismissAddContactView];
+			//call add module delegate method as a callback
+			[self.addModuleDelegate didSaveContactAction];
+		}
+	}];
+}
+
+- (void)invalidDataEntered
+{
+	[self.view presentInvalidDataAlert];
 }
 
 @end

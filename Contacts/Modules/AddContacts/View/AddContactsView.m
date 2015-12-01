@@ -4,8 +4,6 @@
 //
 
 #import "AddContactsView.h"
-#import "NameValidator.h"
-#import "PhoneNumberValidator.h"
 
 static NSString *const kValidationErrorTitle = @"Error";
 static NSString *const kValidationErrorMessage = @"Data provided by you is not valid. Please enter correctly";
@@ -29,40 +27,24 @@ static NSString *const kValidationErrorAlertButtonTitle = @"OK";
     [super viewDidLoad];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-	if (![self isDataValid]) {
-		[self.presenter cancelAddContactAction];
-	}
-
-}
-
-#pragma mark - 
+#pragma mark - Button actions
 
 - (IBAction)saveButtonAction:(id)sender
 {
-	if ([self isDataValid]) {
-		[self.presenter saveAddContactActionWithFirstName:self.firstNameTextField.text
+	[self.presenter saveAddContactActionWithFirstName:self.firstNameTextField.text
 											 lastName:self.lastNameTextField.text
 										  phoneNumber:self.phoneNumberTextField.text];
-	} else {
-		[[[UIAlertView alloc] initWithTitle:kValidationErrorTitle
-									message:kValidationErrorMessage
-								   delegate:nil
-						  cancelButtonTitle:kValidationErrorAlertButtonTitle
-						  otherButtonTitles:nil, nil] show];
-	}
 }
 
-#pragma mark - Private
+#pragma mark - AddContactsViewProtocol method
 
-- (BOOL)isDataValid
+- (void)presentInvalidDataAlert
 {
-	NameValidator *nameValidator = [NameValidator new];
-	PhoneNumberValidator *phValidator = [PhoneNumberValidator new];
-	
-	return [nameValidator validate:self.firstNameTextField.text] && [phValidator validate:self.phoneNumberTextField.text];
+	[[[UIAlertView alloc] initWithTitle:kValidationErrorTitle
+								message:kValidationErrorMessage
+							   delegate:nil
+					  cancelButtonTitle:kValidationErrorAlertButtonTitle
+					  otherButtonTitles:nil, nil] show];
 }
 
 @end

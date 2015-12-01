@@ -14,12 +14,14 @@
 
 @class AddContactsWireFrame;
 
-@protocol AddContactsViewProtocol
-@required
-@property (nonatomic, strong) id <AddContactsPresenterProtocol> presenter;
 /**
  * Add here your methods for communication PRESENTER -> VIEWCONTROLLER
  */
+@protocol AddContactsViewProtocol
+@required
+@property (nonatomic, strong) id <AddContactsPresenterProtocol> presenter;
+
+- (void)presentInvalidDataAlert;
 
 @end
 
@@ -34,45 +36,49 @@
 
 @end
 
-@class Contact;
+/**
+ * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
+ */
 @protocol AddContactsPresenterProtocol
 @required
 @property (nonatomic, weak) id <AddContactsViewProtocol> view;
 @property (nonatomic, strong) id <AddContactsInteractorInputProtocol> interactor;
 @property (nonatomic, strong) id <AddContactsWireFrameProtocol> wireFrame;
-/**
- * Add here your methods for communication VIEWCONTROLLER -> PRESENTER
- */
 
 - (void)cancelAddContactAction;
 - (void)saveAddContactActionWithFirstName:(NSString *)firstName lastName:(NSString *)lastName phoneNumber:(NSString *)phoneNumber;
 
 @end
 
-@protocol AddContactsInteractorOutputProtocol
 /**
  * Add here your methods for communication INTERACTOR -> PRESENTER
  */
+@protocol AddContactsInteractorOutputProtocol
+
+- (void)invalidDataEntered;
+
 @end
 
+/**
+ * Add here your methods for communication PRESENTER -> INTERACTOR
+ */
 @protocol AddContactsDataManagerInputProtocol;
-@class Contact;
+
 @protocol AddContactsInteractorInputProtocol
 @required
 @property (nonatomic, weak) id <AddContactsInteractorOutputProtocol> presenter;
 @property (nonatomic, strong) id <AddContactsDataManagerInputProtocol> localDataManager;
-/**
- * Add here your methods for communication PRESENTER -> INTERACTOR
- */
-- (void)saveNewContactWithFirstName:(NSString *)firstName lastName:(NSString *)lastName phoneNumber:(NSString *)phoneNumber;
+
+- (void)saveNewContactWithFirstName:(NSString *)firstName lastName:(NSString *)lastName phoneNumber:(NSString *)phoneNumber withCompletionBlock:(void (^)(BOOL success))completionBlock;
 
 @end
 
-@class Contact;
-@protocol AddContactsDataManagerInputProtocol
 /**
  * Add here your methods for communication INTERACTOR -> DATAMANAGER
  */
+@class Contact;
+@protocol AddContactsDataManagerInputProtocol
+
 - (void)addNewContact:(Contact *)contact;
 
 @end
