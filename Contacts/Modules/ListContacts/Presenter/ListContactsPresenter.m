@@ -50,9 +50,4 @@
 	[self updateContactList];
 }
 
-- (void)didDeleteContactAction
-{
-	[self updateContactList];
-}
-
 @end

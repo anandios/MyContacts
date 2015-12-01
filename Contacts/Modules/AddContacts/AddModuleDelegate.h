@@ -12,6 +12,5 @@
 
 - (void)didCancelAddContactAction;
 - (void)didSaveContactAction;
-- (void)didDeleteContactAction;
 
 @end
