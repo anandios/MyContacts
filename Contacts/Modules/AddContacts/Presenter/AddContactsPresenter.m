@@ -11,8 +11,6 @@
 - (void)cancelAddContactAction
 {
 	[self.wireFrame dismissAddContactView];
-	//call add module delegate method as a callback
-	[self.addModuleDelegate didCancelAddContactAction];
 }
 
 - (void)saveAddContactActionWithFirstName:(NSString *)firstName lastName:(NSString *)lastName phoneNumber:(NSString *)phoneNumber

@@ -41,11 +41,6 @@
 
 #pragma mark - Add Module Delegate methods
 
-- (void)didCancelAddContactAction
-{
-	//TODO:
-}
-
 - (void)didSaveContactAction
 {
 	[self updateContactList];

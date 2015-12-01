@@ -25,8 +25,7 @@
     [super setUp];
 	self.listContactsView = [[Utilities mainStoryboard] instantiateViewControllerWithIdentifier:@"ListContactsView"];
 	self.presenter = OCMClassMock([ListContactsPresenter class]);
-	[self.listContactsView setPresenter:self.presenter];
-	
+	[self.listContactsView setPresenter:self.presenter];	
 }
 
 - (void)tearDown {
