@@ -6,7 +6,7 @@
 #import <UIKit/UIKit.h>
 #import "AddContactsProtocols.h"
 
-@interface AddContactsView : UIViewController <AddContactsViewProtocol>
+@interface AddContactsView : UITableViewController <AddContactsViewProtocol>
 
 @property (nonatomic, strong) id <AddContactsPresenterProtocol> presenter;
 
