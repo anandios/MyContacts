@@ -7,6 +7,10 @@
 #import "NameValidator.h"
 #import "PhoneNumberValidator.h"
 
+static NSString *const kValidationErrorTitle = @"Error";
+static NSString *const kValidationErrorMessage = @"Data provided by you is not valid. Please enter correctly";
+static NSString *const kValidationErrorAlertButtonTitle = @"OK";
+
 @interface AddContactsView ()
 
 @property (nonatomic, weak) IBOutlet UITextField *firstNameTextField;
@@ -43,10 +47,10 @@
 											 lastName:self.lastNameTextField.text
 										  phoneNumber:self.phoneNumberTextField.text];
 	} else {
-		[[[UIAlertView alloc] initWithTitle:@"Error"
-									message:@"Data provided by you is not valid. Please enter correctly."
+		[[[UIAlertView alloc] initWithTitle:kValidationErrorTitle
+									message:kValidationErrorMessage
 								   delegate:nil
-						  cancelButtonTitle:@"OK"
+						  cancelButtonTitle:kValidationErrorAlertButtonTitle
 						  otherButtonTitles:nil, nil] show];
 	}
 }
