@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@class UIStoryboard;
 
 @interface Utilities : NSObject
 
 + (void)makeCallOnNumber:(NSString *)number;
++ (UIStoryboard *)mainStoryboard;
 
 @end

@@ -6,6 +6,9 @@
 #import "ListContactsWireFrame.h"
 #import "DataStore.h"
 #import "AddContactsWireFrame.h"
+#import "Utilities.h"
+
+static NSString *const kListConactViewIdentifier = @"ListContactsView";
 
 @implementation ListContactsWireFrame
 
@@ -28,18 +31,10 @@
 
 - (ListContactsView *)listViewFromStoryboard
 {
-	UIStoryboard *storyboard = [self mainStoryboard];
-	ListContactsView *listContactView = [storyboard instantiateViewControllerWithIdentifier:@"ListContactsView"];
+	UIStoryboard *storyboard = [Utilities mainStoryboard];
+	ListContactsView *listContactView = [storyboard instantiateViewControllerWithIdentifier:kListConactViewIdentifier];
 	
 	return listContactView;
-}
-
-- (UIStoryboard *)mainStoryboard
-{
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
-														 bundle:[NSBundle mainBundle]];
-	
-	return storyboard;
 }
 
 @end
