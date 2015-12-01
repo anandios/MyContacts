@@ -4,6 +4,9 @@
 //
 
 #import "AddContactsWireFrame.h"
+#import "Utilities.h"
+
+static NSString *const kAddContactViewIdentifier = @"AddContactsView";
 
 @interface AddContactsWireFrame ()
 
@@ -33,19 +36,10 @@
 
 - (AddContactsView *)addViewFromStoryboard
 {
-	UIStoryboard *storyboard = [self mainStoryboard];
-	AddContactsView *addContactView = [storyboard instantiateViewControllerWithIdentifier:@"AddContactsView"];
+	UIStoryboard *storyboard = [Utilities mainStoryboard];
+	AddContactsView *addContactView = [storyboard instantiateViewControllerWithIdentifier:kAddContactViewIdentifier];
 	
 	return addContactView;
 }
-
-- (UIStoryboard *)mainStoryboard
-{
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main"
-														 bundle:[NSBundle mainBundle]];
-	
-	return storyboard;
-}
-
 
 @end
