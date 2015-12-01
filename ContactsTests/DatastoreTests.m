@@ -95,9 +95,14 @@
 - (void)testRemove {
 	NSMutableArray *fakeStorage = [self getFakeStoreForTest];
 	[self.ds setValue:fakeStorage forKey:@"storage"];
-	[self.ds removeContactAtIndex:1 completionBlock:^(NSArray *result) {
+	NSInteger indexOfObject = 1;
+	id obj = fakeStorage[indexOfObject];
+	[self.ds removeContactAtIndex:indexOfObject completionBlock:^(NSArray *result) {
 		XCTAssertTrue(result.count == 2);
+		//Check if correct object was remove and should not exist in store
+		XCTAssertTrue(![fakeStorage containsObject:obj]);
 	}];
+
 }
 
 
