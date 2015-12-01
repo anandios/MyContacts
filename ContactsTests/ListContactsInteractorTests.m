@@ -7,8 +7,16 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
+#import "ListContactsInteractor.h"
+#import "ListContactsPresenter.h"
+#import "ListContactsLocalDataManager.h"
 
 @interface ListContactsInteractorTests : XCTestCase
+
+@property ListContactsInteractor *sut;
+@property id<ListContactsInteractorOutputProtocol> presenter;
+@property id <ListContactsDataManagerInputProtocol> dataManager;
 
 @end
 
@@ -16,24 +24,56 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+	self.sut = [ListContactsInteractor new];
+	//Mocking the dependencies
+	self.presenter = OCMClassMock([ListContactsPresenter class]);
+	self.dataManager = OCMClassMock([ListContactsLocalDataManager class]);
+	//Wire things up
+	[self.sut setPresenter:self.presenter];
+	[self.sut setLocalDataManager:self.dataManager];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+	self.sut = nil;
+	self.presenter = nil;
+	self.dataManager = nil;
+	[super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testFindContacts {
+	//Prepare for the test
+	NSArray *someArray = @[@"strObj1", @"strObj2"];
+	OCMStub([self.dataManager contactsForString:[OCMArg any] withCompletionBlock:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
+		//Completion block signature
+		void (^completionBlock)(NSArray *contacts);
+		//Capture the completionBlock reference
+		[invocation getArgument:&completionBlock atIndex:3];
+		//Invoke the captured success block with fake result
+		completionBlock(someArray);
+	});
+	//Launch
+	[self.sut findContacts];
+	//Test
+	OCMVerify([self.presenter foundContacts:someArray]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testRemoveContact {
+	//Prepare for the test
+	NSMutableArray *someArray = [NSMutableArray arrayWithArray:@[@"strObj1", @"strObj2", @"strObj3"]];
+	NSInteger indexToRemove = 1;
+	OCMStub([self.dataManager deleteContactAtIndex:indexToRemove withCompletionBlock:[OCMArg any]]).andDo(^(NSInvocation *invocation) {
+		//Completion block signature
+		void (^completionBlock)(NSArray *contacts);
+		//Capture the completionBlock reference
+		[invocation getArgument:&completionBlock atIndex:3];
+		//Invoke the captured success block with fake result
+		[someArray removeObjectAtIndex:indexToRemove];
+		completionBlock(someArray);
+	});
+	//Launch
+	[self.sut removeContactAtIndex:indexToRemove];
+	//Test
+	OCMVerify([self.presenter foundContacts:someArray]);	
 }
 
 @end
