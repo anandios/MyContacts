@@ -15,7 +15,7 @@
 @interface ListContactViewTests : XCTestCase
 
 @property (nonatomic, strong) ListContactsView<ListContactsViewProtocol> *listContactsView;
-@property (nonatomic, strong) id <ListContactsPresenterProtocol> presenter;
+@property (nonatomic, strong) id <ListContactsPresenterProtocol, AddModuleDelegate> presenter;
 
 @end
 
@@ -53,6 +53,14 @@
 	
 	OCMVerify([self.presenter deleteContactAtIndex:5]);
 	OCMVerify([self.listContactsView reloadContacts]);
+	OCMVerify([self.listContactsView updateTitle]);
+}
+
+- (void)testUpdateListCallAfterSaving
+{
+	[self.presenter didSaveContactAction];//Fake call, normally this will be called by AddModuleDelegate
+	OCMStub([self.presenter didSaveContactAction]);
+	OCMVerify([self.listContactsView updateTitle]);
 }
 
 @end
