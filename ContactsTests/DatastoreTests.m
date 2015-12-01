@@ -108,18 +108,18 @@
 	PContact *contact1 = [self.ds newContact];
 	[contact1 setFirstName:@"Anand"];
 	[contact1 setLastName:@"Singh"];
-	[contact1 setLastName:@"+4023424543"];
+	[contact1 setPhoneNumber:@"+4023424543"];
 	[fakeStorage addObject:contact1];
 	PContact *contact2 = [self.ds newContact];
 	[contact2 setFirstName:@"Cristian"];
 	[contact2 setLastName:@"Zifceac"];
-	[contact2 setLastName:@"+4023443543"];
+	[contact2 setPhoneNumber:@"+4023443543"];
 	[fakeStorage addObject:contact2];
 
 	PContact *contact3 = [self.ds newContact];
 	[contact2 setFirstName:@"Aman"];
 	[contact2 setLastName:@"Azad"];
-	[contact2 setLastName:@"+91276342734"];
+	[contact2 setPhoneNumber:@"+91276342734"];
 	[fakeStorage addObject:contact3];
 
 	return fakeStorage;

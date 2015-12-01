@@ -11,6 +11,7 @@
 		17354CEF1C0E310700E399C7 /* ListContactPreseterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CEE1C0E310700E399C7 /* ListContactPreseterTests.m */; };
 		17354CF11C0E399300E399C7 /* DatastoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CF01C0E399300E399C7 /* DatastoreTests.m */; };
 		17354CF31C0E486400E399C7 /* ListContactsInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CF21C0E486400E399C7 /* ListContactsInteractorTests.m */; };
+		17354CF51C0E516400E399C7 /* ListContactsLocalDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CF41C0E516400E399C7 /* ListContactsLocalDataManagerTests.m */; };
 		1746B06C1C0D1D4C0017EB0F /* NameValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1746B06B1C0D1D4C0017EB0F /* NameValidator.m */; };
 		1746B06F1C0D1EBD0017EB0F /* PhoneNumberValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1746B06E1C0D1EBD0017EB0F /* PhoneNumberValidator.m */; };
 		17A0B14B1C0051B3002ABB04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A0B14A1C0051B3002ABB04 /* main.m */; };
@@ -56,6 +57,7 @@
 		17354CEE1C0E310700E399C7 /* ListContactPreseterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContactPreseterTests.m; sourceTree = "<group>"; };
 		17354CF01C0E399300E399C7 /* DatastoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatastoreTests.m; sourceTree = "<group>"; };
 		17354CF21C0E486400E399C7 /* ListContactsInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContactsInteractorTests.m; sourceTree = "<group>"; };
+		17354CF41C0E516400E399C7 /* ListContactsLocalDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContactsLocalDataManagerTests.m; sourceTree = "<group>"; };
 		1746B0661C0D1C9B0017EB0F /* TextValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextValidator.h; path = Validator/TextValidator.h; sourceTree = "<group>"; };
 		1746B06A1C0D1D4C0017EB0F /* NameValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameValidator.h; path = Validator/NameValidator.h; sourceTree = "<group>"; };
 		1746B06B1C0D1D4C0017EB0F /* NameValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameValidator.m; path = Validator/NameValidator.m; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				17A0B1661C0051B3002ABB04 /* ValidatorsTests.m */,
 				17354CF01C0E399300E399C7 /* DatastoreTests.m */,
 				17354CF21C0E486400E399C7 /* ListContactsInteractorTests.m */,
+				17354CF41C0E516400E399C7 /* ListContactsLocalDataManagerTests.m */,
 			);
 			path = ContactsTests;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17354CF51C0E516400E399C7 /* ListContactsLocalDataManagerTests.m in Sources */,
 				17354CF11C0E399300E399C7 /* DatastoreTests.m in Sources */,
 				17354CED1C0DA2D800E399C7 /* ContactTest.m in Sources */,
 				17A0B1671C0051B3002ABB04 /* ValidatorsTests.m in Sources */,

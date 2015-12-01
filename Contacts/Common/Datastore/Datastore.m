@@ -50,7 +50,7 @@
 
 - (void)removeContactAtIndex:(NSInteger)index completionBlock:(void (^)(NSArray *result))completionBlock;
 {
-	if (index > -1) {
+	if (index > -1 && [self.storage count] > 0) {
 		[self.storage removeObjectAtIndex:index];
 	}
 	if (completionBlock) {
