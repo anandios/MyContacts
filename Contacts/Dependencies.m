@@ -56,7 +56,7 @@
 	
 	//Inject dependencies
 	//Interactor
-	[listContactsInteractor setOutput:listContactsPresenter];
+	[listContactsInteractor setPresenter:listContactsPresenter];
 	//Presenter
 	[listContactsPresenter setInteractor:listContactsInteractor];
 	[listContactsPresenter setWireFrame:listContactsWireFrame];

@@ -12,7 +12,6 @@
 @property (nonatomic, weak) id <ListContactsInteractorOutputProtocol> presenter;
 
 @property (nonatomic, strong) id <ListContactsDataManagerInputProtocol> localDataManager;
-@property (nonatomic, weak) id<ListContactsInteractorOutputProtocol> output;
 
 - (instancetype)initWithDataManager:(ListContactsLocalDataManager *)dataManager;
 

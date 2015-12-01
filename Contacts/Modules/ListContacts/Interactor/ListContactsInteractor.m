@@ -28,7 +28,7 @@
 {
 	__weak typeof(self) weakSelf = self;
 	[self.localDataManager contactsForString:nil withCompletionBlock:^(NSArray *contacts) {
-		[weakSelf.output foundContacts:contacts];
+		[weakSelf.presenter foundContacts:contacts];
 	}];
 }
 
@@ -36,7 +36,7 @@
 {
 	__weak typeof(self) weakSelf = self;
 	[self.localDataManager deleteContactAtIndex:index withCompletionBlock:^(NSArray *contacts) {
-		[weakSelf.output foundContacts:contacts];
+		[weakSelf.presenter foundContacts:contacts];
 	}];
 }
 
