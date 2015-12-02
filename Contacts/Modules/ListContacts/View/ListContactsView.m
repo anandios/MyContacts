@@ -13,7 +13,6 @@ static NSString *const kSpaceString = @" ";
 
 @interface ListContactsView ()
 
-@property (nonatomic, weak) IBOutlet UITableView *contactListTableView;
 @property (nonatomic, copy) NSString *viewTitle;
 @property (nonatomic, strong) NSArray *contacts;
 
@@ -44,7 +43,6 @@ static NSString *const kSpaceString = @" ";
 	self.view = self.contactListTableView;
 	self.contacts = contactsArray;
 	self.viewTitle = [kViewTitle stringByAppendingString:[NSString stringWithFormat:@"%@(%ld)", kSpaceString, self.contacts.count]];
-	[self reloadContacts];
 }
 
 - (void)updateTitle
@@ -80,7 +78,6 @@ static NSString *const kSpaceString = @" ";
 {
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
 		[self.presenter deleteContactAtIndex:indexPath.row];
-		[self reloadContacts];
 	}
 }
 

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17354CED1C0DA2D800E399C7 /* ContactTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CEC1C0DA2D800E399C7 /* ContactTest.m */; };
+		17354CEF1C0E310700E399C7 /* ListContactPreseterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CEE1C0E310700E399C7 /* ListContactPreseterTests.m */; };
+		17354CF11C0E399300E399C7 /* DatastoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CF01C0E399300E399C7 /* DatastoreTests.m */; };
+		17354CF31C0E486400E399C7 /* ListContactsInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CF21C0E486400E399C7 /* ListContactsInteractorTests.m */; };
+		17354CF51C0E516400E399C7 /* ListContactsLocalDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CF41C0E516400E399C7 /* ListContactsLocalDataManagerTests.m */; };
+		17354CF71C0E649300E399C7 /* AddContactsLocalDataManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CF61C0E649300E399C7 /* AddContactsLocalDataManagerTests.m */; };
+		17354CF91C0E667200E399C7 /* AddContactsPresenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CF81C0E667200E399C7 /* AddContactsPresenterTests.m */; };
+		17354CFB1C0E703D00E399C7 /* AddContactsInteractorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354CFA1C0E703D00E399C7 /* AddContactsInteractorTests.m */; };
+		17354D011C0E80F100E399C7 /* AddContactsViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354D001C0E80F100E399C7 /* AddContactsViewTests.m */; };
+		17354D031C0E86C800E399C7 /* ListContactsWireframeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17354D021C0E86C800E399C7 /* ListContactsWireframeTests.m */; };
 		1746B06C1C0D1D4C0017EB0F /* NameValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1746B06B1C0D1D4C0017EB0F /* NameValidator.m */; };
 		1746B06F1C0D1EBD0017EB0F /* PhoneNumberValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1746B06E1C0D1EBD0017EB0F /* PhoneNumberValidator.m */; };
 		17A0B14B1C0051B3002ABB04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A0B14A1C0051B3002ABB04 /* main.m */; };
@@ -23,6 +33,8 @@
 		17C039881C0BCBF700D8AF12 /* AddContactsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C039801C0BCBF700D8AF12 /* AddContactsView.m */; };
 		17C039891C0BCBF700D8AF12 /* AddContactsWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C039831C0BCBF700D8AF12 /* AddContactsWireFrame.m */; };
 		17C0398E1C0BED5F00D8AF12 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C0398D1C0BED5F00D8AF12 /* Utilities.m */; };
+		17C4205B1C0D39070091CB25 /* ListContactViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C4205A1C0D39070091CB25 /* ListContactViewTests.m */; };
+		17C420851C0D43540091CB25 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C420831C0D43140091CB25 /* libOCMock.a */; };
 		17E2BC1F1C0B73ED00232CFA /* Datastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E2BC1E1C0B73ED00232CFA /* Datastore.m */; };
 		17E2BC221C0B7AE600232CFA /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E2BC211C0B7AE600232CFA /* DataManager.m */; };
 		17E2BC7C1C0B886700232CFA /* ListContactsLocalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E2BC5C1C0B886700232CFA /* ListContactsLocalDataManager.m */; };
@@ -46,6 +58,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17354CEC1C0DA2D800E399C7 /* ContactTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTest.m; sourceTree = "<group>"; };
+		17354CEE1C0E310700E399C7 /* ListContactPreseterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContactPreseterTests.m; sourceTree = "<group>"; };
+		17354CF01C0E399300E399C7 /* DatastoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatastoreTests.m; sourceTree = "<group>"; };
+		17354CF21C0E486400E399C7 /* ListContactsInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContactsInteractorTests.m; sourceTree = "<group>"; };
+		17354CF41C0E516400E399C7 /* ListContactsLocalDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContactsLocalDataManagerTests.m; sourceTree = "<group>"; };
+		17354CF61C0E649300E399C7 /* AddContactsLocalDataManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsLocalDataManagerTests.m; sourceTree = "<group>"; };
+		17354CF81C0E667200E399C7 /* AddContactsPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsPresenterTests.m; sourceTree = "<group>"; };
+		17354CFA1C0E703D00E399C7 /* AddContactsInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsInteractorTests.m; sourceTree = "<group>"; };
+		17354D001C0E80F100E399C7 /* AddContactsViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsViewTests.m; sourceTree = "<group>"; };
+		17354D021C0E86C800E399C7 /* ListContactsWireframeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContactsWireframeTests.m; sourceTree = "<group>"; };
 		1746B0661C0D1C9B0017EB0F /* TextValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextValidator.h; path = Validator/TextValidator.h; sourceTree = "<group>"; };
 		1746B06A1C0D1D4C0017EB0F /* NameValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameValidator.h; path = Validator/NameValidator.h; sourceTree = "<group>"; };
 		1746B06B1C0D1D4C0017EB0F /* NameValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameValidator.m; path = Validator/NameValidator.m; sourceTree = "<group>"; };
@@ -81,6 +103,18 @@
 		17C039831C0BCBF700D8AF12 /* AddContactsWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddContactsWireFrame.m; sourceTree = "<group>"; };
 		17C0398C1C0BED5F00D8AF12 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = Utilities/Utilities.h; sourceTree = "<group>"; };
 		17C0398D1C0BED5F00D8AF12 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = Utilities/Utilities.m; sourceTree = "<group>"; };
+		17C4205A1C0D39070091CB25 /* ListContactViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListContactViewTests.m; sourceTree = "<group>"; };
+		17C420781C0D43140091CB25 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		17C420791C0D43140091CB25 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		17C4207A1C0D43140091CB25 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		17C4207B1C0D43140091CB25 /* OCMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMFunctions.h; sourceTree = "<group>"; };
+		17C4207C1C0D43140091CB25 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		17C4207D1C0D43140091CB25 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		17C4207E1C0D43140091CB25 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		17C4207F1C0D43140091CB25 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		17C420801C0D43140091CB25 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		17C420811C0D43140091CB25 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		17C420831C0D43140091CB25 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		17E2BC1D1C0B73ED00232CFA /* Datastore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Datastore.h; path = Common/Datastore/Datastore.h; sourceTree = "<group>"; };
 		17E2BC1E1C0B73ED00232CFA /* Datastore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Datastore.m; path = Common/Datastore/Datastore.m; sourceTree = "<group>"; };
 		17E2BC201C0B7AE600232CFA /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = Common/Manager/DataManager.h; sourceTree = "<group>"; };
@@ -115,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C420851C0D43540091CB25 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +171,7 @@
 		17A0B13D1C0051B3002ABB04 = {
 			isa = PBXGroup;
 			children = (
+				17C420751C0D43140091CB25 /* usr */,
 				17A0B1481C0051B3002ABB04 /* Contacts */,
 				17A0B1651C0051B3002ABB04 /* ContactsTests */,
 				17A0B1471C0051B3002ABB04 /* Products */,
@@ -178,8 +214,19 @@
 		17A0B1651C0051B3002ABB04 /* ContactsTests */ = {
 			isa = PBXGroup;
 			children = (
-				17A0B1661C0051B3002ABB04 /* ValidatorsTests.m */,
 				17A0B1681C0051B3002ABB04 /* Info.plist */,
+				17C4205A1C0D39070091CB25 /* ListContactViewTests.m */,
+				17354CEE1C0E310700E399C7 /* ListContactPreseterTests.m */,
+				17354CF21C0E486400E399C7 /* ListContactsInteractorTests.m */,
+				17354CF41C0E516400E399C7 /* ListContactsLocalDataManagerTests.m */,
+				17354D021C0E86C800E399C7 /* ListContactsWireframeTests.m */,
+				17354D001C0E80F100E399C7 /* AddContactsViewTests.m */,
+				17354CF81C0E667200E399C7 /* AddContactsPresenterTests.m */,
+				17354CFA1C0E703D00E399C7 /* AddContactsInteractorTests.m */,
+				17354CF61C0E649300E399C7 /* AddContactsLocalDataManagerTests.m */,
+				17A0B1661C0051B3002ABB04 /* ValidatorsTests.m */,
+				17354CEC1C0DA2D800E399C7 /* ContactTest.m */,
+				17354CF01C0E399300E399C7 /* DatastoreTests.m */,
 			);
 			path = ContactsTests;
 			sourceTree = "<group>";
@@ -300,6 +347,48 @@
 				17C0398D1C0BED5F00D8AF12 /* Utilities.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		17C420751C0D43140091CB25 /* usr */ = {
+			isa = PBXGroup;
+			children = (
+				17C420761C0D43140091CB25 /* include */,
+				17C420821C0D43140091CB25 /* lib */,
+			);
+			path = usr;
+			sourceTree = "<group>";
+		};
+		17C420761C0D43140091CB25 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				17C420771C0D43140091CB25 /* OCMock */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		17C420771C0D43140091CB25 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				17C420781C0D43140091CB25 /* NSNotificationCenter+OCMAdditions.h */,
+				17C420791C0D43140091CB25 /* OCMArg.h */,
+				17C4207A1C0D43140091CB25 /* OCMConstraint.h */,
+				17C4207B1C0D43140091CB25 /* OCMFunctions.h */,
+				17C4207C1C0D43140091CB25 /* OCMLocation.h */,
+				17C4207D1C0D43140091CB25 /* OCMMacroState.h */,
+				17C4207E1C0D43140091CB25 /* OCMock.h */,
+				17C4207F1C0D43140091CB25 /* OCMockObject.h */,
+				17C420801C0D43140091CB25 /* OCMRecorder.h */,
+				17C420811C0D43140091CB25 /* OCMStubRecorder.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		17C420821C0D43140091CB25 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				17C420831C0D43140091CB25 /* libOCMock.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 		17E2BC1C1C0B73C500232CFA /* Store */ = {
@@ -543,7 +632,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17354CF71C0E649300E399C7 /* AddContactsLocalDataManagerTests.m in Sources */,
+				17354CF51C0E516400E399C7 /* ListContactsLocalDataManagerTests.m in Sources */,
+				17354D011C0E80F100E399C7 /* AddContactsViewTests.m in Sources */,
+				17354CF11C0E399300E399C7 /* DatastoreTests.m in Sources */,
+				17354CED1C0DA2D800E399C7 /* ContactTest.m in Sources */,
+				17354CF91C0E667200E399C7 /* AddContactsPresenterTests.m in Sources */,
 				17A0B1671C0051B3002ABB04 /* ValidatorsTests.m in Sources */,
+				17354D031C0E86C800E399C7 /* ListContactsWireframeTests.m in Sources */,
+				17354CF31C0E486400E399C7 /* ListContactsInteractorTests.m in Sources */,
+				17354CEF1C0E310700E399C7 /* ListContactPreseterTests.m in Sources */,
+				17C4205B1C0D39070091CB25 /* ListContactViewTests.m in Sources */,
+				17354CFB1C0E703D00E399C7 /* AddContactsInteractorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,8 +785,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
 				INFOPLIST_FILE = ContactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.applicious.ContactsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Contacts.app/Contacts";
@@ -697,8 +803,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/usr/include";
 				INFOPLIST_FILE = ContactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/usr/lib",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ro.applicious.ContactsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Contacts.app/Contacts";

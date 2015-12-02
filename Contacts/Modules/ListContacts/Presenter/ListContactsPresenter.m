@@ -35,15 +35,11 @@
 		[self.view showNoContactsMessage];
 	}
 	[self.view updateTitle];
+	[self.view reloadContacts];
 }
 
 
 #pragma mark - Add Module Delegate methods
-
-- (void)didCancelAddContactAction
-{
-	//TODO:
-}
 
 - (void)didSaveContactAction
 {

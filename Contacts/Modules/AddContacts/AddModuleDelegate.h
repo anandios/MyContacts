@@ -10,7 +10,6 @@
 
 @protocol AddModuleDelegate <NSObject>
 
-- (void)didCancelAddContactAction;
 - (void)didSaveContactAction;
 
 @end

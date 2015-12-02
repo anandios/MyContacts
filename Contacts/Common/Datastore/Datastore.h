@@ -16,7 +16,7 @@
 - (PContact *)newContact;
 //This method will have to be changed for persistance will be implemented
 - (void)save:(PContact *)contact;
-- (void)fetchContactsWithPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors completionBlock:(void (^)(NSArray *))completionBlock;
-- (void)removeContactAtIndex:(NSInteger)index completionBlock:(void (^)(NSArray *))completionBlock;
+- (void)fetchContactsWithPredicate:(NSPredicate *)predicate sortDescriptors:(NSArray *)sortDescriptors completionBlock:(void (^)(NSArray *result))completionBlock;
+- (void)removeContactAtIndex:(NSInteger)index completionBlock:(void (^)(NSArray *result))completionBlock;
 
 @end
