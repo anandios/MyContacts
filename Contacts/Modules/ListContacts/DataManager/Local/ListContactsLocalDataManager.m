@@ -13,12 +13,14 @@
 - (void)contactsForString:(NSString *)searchString withCompletionBlock:(void (^)(NSArray *contacts))completionBlock
 {
 	__weak typeof(self) weakSelf = self;
-	NSPredicate *firstNamePredicate = [NSPredicate predicateWithFormat:@"firstName CONTAINS %@", searchString];
-	NSPredicate *lastNamePredicate = [NSPredicate predicateWithFormat:@"lastName CONTAINS %@", searchString];
-	NSPredicate *phoneNumberPredicate = [NSPredicate predicateWithFormat:@"phoneNumber CONTAINS %@", searchString];
-	NSPredicate *finalPredicate = [NSCompoundPredicate orPredicateWithSubpredicates:@[firstNamePredicate, lastNamePredicate, phoneNumberPredicate]];
+	NSString *search;
+	NSPredicate *predicate;
+	if (searchString) {
+		search = [@"*" stringByAppendingString:searchString];
+		predicate = [NSPredicate predicateWithFormat:@"firstName LIKE %@ || phoneNumber LIKE %@", [search stringByAppendingString:@"*"], [search stringByAppendingString:@"*"]];
+	}
 
-	[weakSelf.ds fetchContactsWithPredicate:finalPredicate sortDescriptors:nil completionBlock:^(NSArray *result) {
+	[weakSelf.ds fetchContactsWithPredicate:predicate sortDescriptors:nil completionBlock:^(NSArray *result) {
 		completionBlock([self contactsFromDatastoreEntries:result]);
 	}];
 }
