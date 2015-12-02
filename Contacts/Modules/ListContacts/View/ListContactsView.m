@@ -13,7 +13,6 @@ static NSString *const kSpaceString = @" ";
 
 @interface ListContactsView ()
 
-@property (nonatomic, weak) IBOutlet UITableView *contactListTableView;
 @property (nonatomic, copy) NSString *viewTitle;
 @property (nonatomic, strong) NSArray *contacts;
 

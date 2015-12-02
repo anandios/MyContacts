@@ -9,6 +9,7 @@
 @interface ListContactsView : UIViewController <ListContactsViewProtocol>
 
 @property (nonatomic, weak) IBOutlet UIView *noContactsView;
+@property (nonatomic, weak) IBOutlet UITableView *contactListTableView;
 @property (nonatomic, strong) id <ListContactsPresenterProtocol> presenter;
 
 @end

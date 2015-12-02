@@ -62,4 +62,13 @@
 	OCMVerify([self.listContactsView updateTitle]);
 }
 
+- (void)testShowContactsUsingArray {
+	[self.listContactsView showContactsUsingArray:@[@1, @2]];
+	XCTAssertTrue([self.listContactsView.view isEqual:self.listContactsView.contactListTableView]);
+}
+
+- (void)testShowNoContactsMessage {
+	[self.listContactsView showNoContactsMessage];
+	XCTAssertTrue([self.listContactsView.view isEqual:self.listContactsView.noContactsView]);
+}
 @end
